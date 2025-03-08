@@ -63,6 +63,7 @@
   background-size: cover;
   padding: 2.6vw;
   display: grid;
+  block-size: 100vh;
 }
 
 .decorated-zone::before {
@@ -175,6 +176,8 @@
   display: grid;
   text-align: center;
   margin: 2.6vw;
+  block-size: 100vh;
+
 }
 
 .footer__title {
