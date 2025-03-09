@@ -3,15 +3,32 @@
   и их переопределение под различные устройства
 */
 
-:root {
-  --main_title-color: #FF0070;
-  --secondary-title-color: #000028;
-  --big-title:#DB00FF;
-  --shadow-big-title: #FF0070;
-  --background-title: #FF0070;
-  --text-color: #F1B2CE;
-  --opacity-outline: #FF007066;
-  --action-display-lamp: flex;
-  --header-background: url(/images/cover-image-dark.png);
-  --theme-color: url(/images/cover-image.png);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --title-color: #FF0070;
+    --secondary-title-color: #000028;
+    --big-title:#DB00FF;
+    --shadow-big-title: #FF0070;
+    --background-title: #FF0070;
+    --text-color: #F1B2CE;
+    --action-display-lamp: flex;
+    --opacity-outline: #FF007066;
+    --header-background: url(../images/cover-image-dark.png);
+    --theme-color: #000028;
+  }
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --title-color: #353430;
+    --secondary-title-color: #353430;
+    --big-title:#FFC2E6;
+    --shadow-big-title: #FF8DCB;
+    --background-title: #FF8DCB;
+    --text-color: #353430;
+    --action-display-lamp: none;
+    --opacity-outline: #32312D66;
+    --header-background: url(../images/cover-image-light.png);
+    --theme-color: #fff1f7;
+  }
+} 
