@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 * {
-  font-family: 'IBM Plex mono' , monospace;
+  font-family: "IBM Plex mono", monospace;
   font-weight: normal;
   font-size: 18px;
   line-height: 23.4px;
@@ -18,9 +18,8 @@
   gap: 40px;
   background-color: var(--theme-color);
   position: relative;
-  overflow-x: hidden;
   justify-content: center;
-  min-width: 365px;
+  max-width: 100%;
 }
 
 .decorated__lamp {
@@ -83,7 +82,7 @@
   align-self: start;
   inline-size: 25px;
   block-size: 25px;
-  border: 1px solid  var(--title-color);
+  border: 1px solid var(--title-color);
   border-width: 1px 1px 0 0;
   position: absolute;
 }
@@ -92,7 +91,7 @@
   content: "";
   inline-size: 25px;
   block-size: 25px;
-  border: 1px solid  var(--title-color);
+  border: 1px solid var(--title-color);
   border-width: 0 0 1px 1px;
   align-self: end;
   justify-self: start;
@@ -145,9 +144,9 @@
 }
 
 .list__item {
- display: flex;
- flex-direction: column;
- gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .item__title {
@@ -257,7 +256,7 @@
     padding: 20px;
     block-size: min(1024px);
   }
-  
+
   .big__title {
     font-size: 120px;
     line-height: 101px;
@@ -265,7 +264,7 @@
 
   .header__title {
     margin-block-start: 2vw;
-    margin-inline-start: -20px;   
+    margin-inline-start: -20px;
   }
 
   .header__comment {
@@ -290,7 +289,7 @@
     grid-template-columns: minmax(236px, 315px) minmax(472px, 649px);
   }
 
-  .container__block:has(.item__title-mini){
+  .container__block:has(.item__title-mini) {
     margin-block-start: 30px;
   }
 
@@ -356,12 +355,10 @@
   .footer.decorated-zone::after {
     margin-block-end: 40px;
   }
-
 }
 @media (min-width: 1024px) {
-
   .header {
-    grid-template-rows: repeat(3 , min-content);
+    grid-template-rows: repeat(3, min-content);
     block-size: min(768px);
   }
 
@@ -376,7 +373,7 @@
   }
 
   .header__title {
-    margin-block-start: 26.9vw;
+    margin-block-start: 273px;
     margin-inline-start: -20px;
   }
 
@@ -387,7 +384,7 @@
 
   .header__comment {
     inline-size: 491px;
-    margin-block-start: 11vw;
+    margin-block-start: 114px;
   }
 
   .container__block {
@@ -397,14 +394,11 @@
   .container__adaptive {
     margin-block-start: 32px;
     justify-content: center;
-    grid-template-columns: repeat(3 , 315px);
-  }
-  
-  .container__title-adaptive {
-    inline-size: 315px;
+    grid-template-columns: repeat(3, 315px);
   }
 
   .container__title-adaptive {
+    inline-size: 315px;
     grid-column: span 1;
   }
 
