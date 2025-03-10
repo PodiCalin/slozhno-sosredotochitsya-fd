@@ -100,7 +100,7 @@
 
 .big__title {
   font-size: 116px;
-  line-height: 95.7px;
+  line-height: 83%;
   font-weight: bold;
   color: var(--big-title);
   text-shadow: 4px 4px 0 var(--shadow-big-title);
@@ -194,19 +194,25 @@
 }
 
 .footer {
-  display: grid;
-  text-align: center;
+  position: relative;
+  display: flex;
   margin: 2.6vw;
   block-size: min(668px);
+  align-items: center;
+  justify-content: center;
 }
 
 .footer__title {
-  margin-block-start: 73.4vw;
-  margin-inline-start: 2px;
+  margin-block-end: 19px;
+}
+
+.footer.decorated-zone::before {
+  inset-inline-end: 0;
 }
 
 .footer.decorated-zone::after {
-  margin-block-end: 20px;
+  inset-block-end: 20px;
+  inset-inline-start: 0;
 }
 
 /* Эффекты */
@@ -229,7 +235,10 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid currentColor;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 4px;
+
 }
 
 .header__theme-menu-button:hover {
@@ -259,7 +268,6 @@
 
   .big__title {
     font-size: 120px;
-    line-height: 101px;
   }
 
   .header__title {
@@ -349,11 +357,11 @@
   }
 
   .footer__title {
-    margin-block-start: 57.6vw;
+    margin-block-end: 35px;
   }
 
   .footer.decorated-zone::after {
-    margin-block-end: 40px;
+    inset-block-end: 40px;
   }
 }
 @media (min-width: 1024px) {
@@ -372,14 +380,13 @@
     display: inline-flex;
   }
 
+  .big__title {
+    font-size: 157px;
+  }
+
   .header__title {
     margin-block-start: 273px;
     margin-inline-start: -20px;
-  }
-
-  .big__title {
-    font-size: 157px;
-    line-height: 130px;
   }
 
   .header__comment {
@@ -399,19 +406,14 @@
 
   .container__title-adaptive {
     inline-size: 315px;
-    grid-column: span 1;
-  }
-
-  .container__adaptive > .list__item {
-    grid-row: 2 / 3;
+    grid-column: span 3;
   }
 
   .footer {
     block-size: min(768px);
-    margin: 20px;
   }
 
   .footer__title {
-    margin-block-start: 29.2vw;
+    margin-block-end: 43px;
   }
 }
