@@ -19,7 +19,7 @@
   background-color: var(--theme-color);
   position: relative;
   justify-content: center;
-  min-width: 100vw;
+  min-inline-size: 375px;
 }
 
 .decorated__lamp {
