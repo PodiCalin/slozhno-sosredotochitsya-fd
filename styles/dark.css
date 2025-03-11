@@ -24,3 +24,18 @@
   --header-background: url(../images/cover-image-dark.png);
   --theme-color: #000028;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --title-color: #FF0070;
+    --secondary-title-color: #000028;
+    --big-title:#DB00FF;
+    --shadow-big-title: #FF0070;
+    --background-title: #FF0070;
+    --text-color: #F1B2CE;
+    --action-display-lamp: flex;
+    --opacity-outline: #FF007066;
+    --header-background: url(../images/cover-image-dark.png);
+    --theme-color: #000028;
+  }
+}

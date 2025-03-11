@@ -25,3 +25,18 @@
   --header-background: url(../images/cover-image-light.png);
   --theme-color: #fff1f7;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --title-color: #353430;
+    --secondary-title-color: #353430;
+    --big-title:#FFC2E6;
+    --shadow-big-title: #FF8DCB;
+    --background-title: #FF8DCB;
+    --text-color: #353430;
+    --action-display-lamp: none;
+    --opacity-outline: #32312D66;
+    --header-background: url(../images/cover-image-light.png);
+    --theme-color: #fff1f7;
+  }
+} 
