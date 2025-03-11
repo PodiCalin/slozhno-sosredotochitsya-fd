@@ -9,29 +9,25 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-image: var(--theme-color);
+  background-image: var(--header-background);
   background-size: cover;
   background-attachment: fixed;
-  block-size: fit-content;
-  margin-inline: auto;
   display: grid;
   gap: 40px;
   background-color: var(--theme-color);
-  position: relative;
-  justify-content: center;
-  min-inline-size: 375px;
 }
 
 .decorated__lamp {
   color: var(--title-color);
   line-height: 25px;
   position: absolute;
-  top: minmax(10px, 20px);
   justify-self: end;
   margin-right: 9px;
   display: var(--action-display-lamp);
   align-items: center;
   gap: 10px;
+  inset-block-start: 2.6vw;
+  inset-inline-end: 2.6vw;
 }
 
 .decorated__lamp::after {
@@ -66,14 +62,14 @@
   padding-block-end: 3px;
 }
 
-.header {
-  background-image: var(--header-background);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 2.6vw;
+.header,
+.footer {
+  position: relative;
   display: grid;
-  block-size: min(668px);
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding-block: 2.6vw;
+  padding-inline: 2.6vw;
 }
 
 .decorated-zone::before {
@@ -85,6 +81,8 @@
   border: 1px solid var(--title-color);
   border-width: 1px 1px 0 0;
   position: absolute;
+  inset-block-start: 2.6vw;
+  inset-inline-end: 2.6vw;
 }
 
 .decorated-zone::after {
@@ -96,6 +94,8 @@
   align-self: end;
   justify-self: start;
   position: absolute;
+  inset-block-end: 2.6vw;
+  inset-inline-start: 2.6vw;
 }
 
 .big__title {
@@ -194,25 +194,12 @@
 }
 
 .footer {
-  position: relative;
-  display: flex;
-  margin: 2.6vw;
-  block-size: min(668px);
   align-items: center;
   justify-content: center;
 }
 
 .footer__title {
   margin-block-end: 19px;
-}
-
-.footer.decorated-zone::before {
-  inset-inline-end: 0;
-}
-
-.footer.decorated-zone::after {
-  inset-block-end: 20px;
-  inset-inline-start: 0;
 }
 
 /* Эффекты */
@@ -238,7 +225,6 @@
   text-decoration: underline;
   text-decoration-color: currentColor;
   text-underline-offset: 4px;
-
 }
 
 .header__theme-menu-button:hover {
@@ -257,13 +243,30 @@
     gap: 60px;
   }
 
+  .decorated__lamp {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+
   .header__theme-menu {
     margin-top: 22.3vw;
   }
 
-  .header {
-    padding: 20px;
-    block-size: min(1024px);
+  .header,
+  .footer {
+    padding-block: 20px;
+    padding-inline: 20px;
+    min-block-size: 1024px;
   }
 
   .big__title {
@@ -352,22 +355,17 @@
   }
 
   .footer {
-    block-size: min(1024px);
-    margin: 20px;
+    min-block-size: 1024px;
   }
 
   .footer__title {
     margin-block-end: 35px;
   }
-
-  .footer.decorated-zone::after {
-    inset-block-end: 40px;
-  }
 }
 @media (min-width: 1024px) {
   .header {
     grid-template-rows: repeat(3, min-content);
-    block-size: min(768px);
+    min-block-size: 768px;
   }
 
   .header__theme-menu {
@@ -410,7 +408,7 @@
   }
 
   .footer {
-    block-size: min(768px);
+    min-block-size: 768px;
   }
 
   .footer__title {
