@@ -12,8 +12,6 @@
   background-image: var(--header-background);
   background-size: cover;
   background-attachment: fixed;
-  display: grid;
-  gap: 40px;
   background-color: var(--theme-color);
 }
 
@@ -122,6 +120,7 @@
 }
 
 .main {
+  margin-block-start: 40px;
   display: grid;
   gap: 49px;
   padding-inline: 2.6vw;
@@ -194,12 +193,9 @@
 }
 
 .footer {
+  margin-block-start: 40px;
   align-items: center;
   justify-content: center;
-}
-
-.footer__title {
-  margin-block-end: 19px;
 }
 
 /* Эффекты */
@@ -239,10 +235,6 @@
 /* Медиа */
 
 @media (min-width: 768px) {
-  .page {
-    gap: 60px;
-  }
-
   .decorated__lamp {
     inset-block-start: 20px;
     inset-inline-end: 20px;
@@ -284,6 +276,7 @@
   }
 
   .main {
+    margin-block-start: 60px;
     padding-inline: 20px;
     justify-content: center;
   }
@@ -355,11 +348,8 @@
   }
 
   .footer {
+    margin-block-start: 60px;
     min-block-size: 1024px;
-  }
-
-  .footer__title {
-    margin-block-end: 35px;
   }
 }
 @media (min-width: 1024px) {
@@ -409,9 +399,5 @@
 
   .footer {
     min-block-size: 768px;
-  }
-
-  .footer__title {
-    margin-block-end: 43px;
   }
 }
