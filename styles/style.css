@@ -40,7 +40,7 @@
 
 .header__theme-menu {
   justify-self: end;
-  margin-top: 17vw;
+  margin-top: 18vw;
   block-size: fit-content;
 }
 
@@ -68,6 +68,10 @@
   min-block-size: 668px;
   padding-block: 2.6vw;
   padding-inline: 2.6vw;
+}
+
+.header {
+  grid-template-rows: repeat(3 , 1fr);
 }
 
 .decorated-zone::before {
@@ -106,7 +110,7 @@
 }
 
 .header__title {
-  margin-block-start: 4.5vw;
+  align-self: center;
 }
 
 .header__comment {
@@ -115,21 +119,26 @@
   font-weight: bold;
   inline-size: fit-content;
   block-size: fit-content;
-  margin-block-end: 1.5vw;
+  margin-block-start: 44px;
   justify-self: end;
 }
 
 .main {
   margin-block-start: 40px;
   display: grid;
-  gap: 49px;
+  gap: 40px;
   padding-inline: 2.6vw;
 }
 
 .content__section {
+  margin-block-start: 5px;
   display: grid;
   gap: 20px;
   justify-content: center;
+}
+
+.container__block {
+  margin-block-start: 6px;
 }
 
 .container__title {
@@ -173,6 +182,7 @@
 .container__gallery {
   display: grid;
   gap: 10px;
+  margin-block-start: 10px;
 }
 
 .container__gallery-title {
@@ -234,6 +244,7 @@
 /* Медиа */
 
 @media (min-width: 768px) {
+
   .decorated__lamp {
     inset-block-start: 20px;
     inset-inline-end: 20px;
@@ -265,23 +276,22 @@
   }
 
   .header__title {
-    margin-block-start: 2vw;
     margin-inline-start: -20px;
   }
 
   .header__comment {
     inline-size: 364px;
-    margin-block-end: 0.5vw;
+    margin-block-start: 48px;
   }
 
   .main {
-    margin-block-start: 60px;
+    margin-block-start: 54px;
     padding-inline: 20px;
     justify-content: center;
   }
 
   .container__adaptive {
-    margin-block-start: 30px;
+    margin-block-start: 38px;
   }
 
   .container__title-adaptive {
@@ -293,7 +303,7 @@
   }
 
   .container__block:has(.item__title-mini) {
-    margin-block-start: 30px;
+    margin-block-start: 41px;
   }
 
   .container__block .container__title {
@@ -305,7 +315,7 @@
   }
 
   .container__gallery {
-    margin-block-start: 10px;
+    margin-block-start: 38px;
     gap: 20px;
   }
 
@@ -347,7 +357,6 @@
 }
 @media (min-width: 1024px) {
   .header {
-    grid-template-rows: repeat(3, min-content);
     min-block-size: 768px;
   }
 
@@ -365,18 +374,13 @@
     font-size: 157px;
   }
 
-  .header__title {
-    margin-block-start: 27vw;
-    margin-inline-start: -20px;
-  }
-
   .header__comment {
     inline-size: 491px;
-    margin-block-start: 114px;
+    margin-block-start: 58px;
   }
 
   .container__adaptive {
-    margin-block-start: 32px;
+    margin-block-start: 40px;
     justify-content: center;
     grid-template-columns: repeat(3, 315px);
   }
